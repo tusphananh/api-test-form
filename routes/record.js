@@ -15,7 +15,7 @@ const ObjectId = require("mongodb").ObjectId;
 recordRoutes.route("/records").post(function (req, response) {
   let db_connect = dbo.getDb();
   const data = JSON.parse(req.body.body);
-
+  console.log(process.env.ATLAS_URI);
   let myobj = {
     info: data.info,
     section_1: data.section_1,
