@@ -27,4 +27,9 @@ recordRoutes.route("/records").post(function (req, response) {
   });
 });
 
+recordRoutes.route("/records").get(function (req, response) {
+  const data = { success: true, message: "Hello World" };
+  response.json(data);
+});
+
 module.exports = recordRoutes;
