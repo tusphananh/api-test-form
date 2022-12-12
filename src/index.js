@@ -3,7 +3,12 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
-app.use(cors());
+// Allow *
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 app.use(require("./routes/record"));
 // get driver connection
